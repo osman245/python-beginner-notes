@@ -1,0 +1,11 @@
+Name: John Smith
+Email: john@gmail.com
+Phone: 1234
+
+
+customer = {
+    "name":"John Smith"
+    "age": 30,
+    "age": 40,
+    "is_verified": True
+}
