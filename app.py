@@ -69,161 +69,112 @@ def loops():
 
 # Generate a Random Number....
 
+
 import random
 
-# There is no such thing as do while loops in python, you need to enhance your while loop in order replicate that type of functionality...
-secret_number = int(random.random() * 10) + 1
-guess = 0
-while secret_number != guess:
-  guess = int(input('Guess: '))
-  if guess == secret_number:
-    print('You won!')
-    break
-  elif guess > secret_number:
-    print("Go lower!!")
-  else: 
-    print("Go higher!!")
 
-for item in [1,2,3,4,5,6,7,8]:
-    print(item)
+def numGenerate():
+    # There is no such thing as do while loops in python, you need to enhance your while loop in order replicate that type of functionality...
+    secret_number = int(random.random() * 10) + 1
+    guess = 0
+    while secret_number != guess:
+        guess = int(input('Guess: '))
+        if guess == secret_number:
+            print('You won!')
+            break
+        elif guess > secret_number:
+            print("Go lower!!")
+        else: 
+            print("Go higher!!")
 
-for item in range(10): 
-  print(item)
+        for item in [1,2,3,4,5,6,7,8]:
+            print(item)
 
-
-
-
-# prices = [10 , 20, 30]
-
-# total = 0
-# for price in prices:
-#     total += price
-# print(f"Total: {total}")
-# item  = [1,2,3,4,5,6,7,8,9]
-# for x in range(4):
-#     for y in range(3):
-#         print(f'({x},{y}')
+        for item in range(10): 
+            print(item)
 
 
-# numbers = (1,2,3) # using parenthesis makes this from a list to a tuple...
-# print(numbers[0]) 
-# numbers[0] = 10 # CANT DO this , tuples are immutable.. you going to get an error..
-# print(numbers[0])
-
-# coordinates = (1,2,3)
-# coordinates[0] * coordinates[1] * coordinates[2]
-
-# # First Version
-# x = coordinates[0]
-# y = coordinates[1]
-# z = coordinates[2]
-
-# # Second Version, cleaner code for readability
-# x , y, z = coordinates
 
 
-# customer = {
-#     "name":"John Smith",
-#     "age": 30,
-#     "age": 40,
-#     "is_verified": True
-# }
-# customer["name"] = "Jack Smith"
-# print(customer.get("birthdate"))
-
-# phone = input("Phone: ")
-# digits_mapping = {
-# "1":"One",
-# "2":"Two",
-# "3":"Three",
-# "4":"Four",
-# }
-
-# output = ""
-# for ch in phone:
-#     output += digits_mapping.get(ch, "!") + " "
-# print(output)
+# Loops
+def loops2():
+    total = 0
+    for price in prices:
+        total += price
+    print(f"Total: {total}")
+    item  = [1,2,3,4,5,6,7,8,9]
+    for x in range(4):# go from 0-3
+        for y in range(3): # go from 0 - 2
+            print(f'({x},{y}')
 
 
-# Example 1: Create a game where you print out emojis using the dictionary
-# message = input(">>")
-# words = message.split(' ') # This string is being split into an list
-# print(words)
-# emojis  = {
-#     ":)":"🆗",
-#     ":(":"🆘"
-# }
-# output = ""
-# for word in words:
-#   output += emojis.get(word,word) + " "
-# print(output)
-
-
-# Introduction to functions...
-# def greet_user():
-#   print('Hi there!')
-#   print("Welcome aboard")
-
-
-# print("Start")
-# greet_user()
-# print("Finish")
-
+customer = {
+    "name":"John Smith",
+    "age": 30,
+    "age": 40,
+    "is_verified": True
+}
+customer["name"] = "Jack Smith"
+print(customer.get("birthdate"))
 
 # Exceptions
-# try:
-#     age = int(input("Age: "))
-#     income = 20000
-#     risk = income / age
-#     print(age)
-# except ZeroDivisionError:
-#    print("Age cannot be 0.")
-# except ValueError:
-#    print('Invalid value')
+def exception222():
+    try:
+        age = int(input("Age: "))
+        income = 20000
+        risk = income / age
+        print(age)
+    except ZeroDivisionError:
+      print("Age cannot be 0.")
+    except ValueError:
+      print('Invalid value')
 
 # Different types in python: Number, Boolean, String,List, Dictionaries, Classes
 
 # Classes
-# class Point:
-#    def __init__(self,x,y): # underscores to avoid naming conflicts with python keywords...
-#       self.x = x
-#       self.y = y
-#    def move(self):
-#       print("move")
-#    def draw(self):
-#       print("draw")
+class Point:
+   def __init__(self,x,y): # underscores to avoid naming conflicts with python keywords...
+      self.x = x
+      self.y = y
+   def move(self):
+      print("move")
+   def draw(self):
+      print("draw")
 
    
-# point1 = Point()
-# point1.x = 10
-# point1.y = 20
-# print(point1.x)
-# point1.draw()
+point1 = Point()
+point1.x = 10
+point1.y = 20
+print(point1.x)
+point1.draw()
 
-# point2 = Point()
-# point2.x = 1
-# print(point2.x)
-# point2.move();
+point2 = Point()
+point2.x = 1
+print(point2.x)
+point2.move()
 
-# class Person: 
-#    def __init__(self,name): # We use init to identify a constructor
-#       self.name = name
-#    def talk(self):
-#       print("I like to talk")
+class Person: 
+   def __init__(self,name): # We use init to identify a constructor
+      self.name = name
+   def talk(self):
+      print("I like to talk")
 
 
-# person = Person("Warsame Osman")
-# print(person.name)
-# person.talk()
+person = Person("Warsame Osman")
+print(person.name)
+person.talk()
 
-# # Inheritance
 
-# class Mammal: 
-#     def walk(self):
-#         print("walk")
 
-# class Dog(Mammal):
-#     pass # Do Nothing
 
-# class Cat(Mammal):
-#     pass
+# Inheritance
+
+class Mammal: 
+    def walk(self):
+        print("walk")
+
+class Dog(Mammal): # you inherit the walk function
+    pass # Do Nothing
+
+class Cat(Mammal):
+    pass
