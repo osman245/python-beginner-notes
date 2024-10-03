@@ -21,7 +21,6 @@ def weiTyp():
 
 
 def courseTyp():    
-    print(course)
     name = 'Jennifer'
     print(name[1:-1]) ## Give the character range you want
     first = 'John'
@@ -43,70 +42,53 @@ x = 2 ** 2 ## exponentiation...\
 print(round(x))
 print(abs(-2.9))
 
-# # is_hot = True
 
 
-# # if is_hot: # if statements you need to indent.. to clearly distinguish blocks..
-# #     print("It's a hot day")
-# #     print("Drink plenty of water")
-# # else: 
-# #     print("It's a cold day")
-# #     print("Wear warm clothes")
-# # print("Enjoy your day")
-
-# has_high_income = True
-# has_good_credit = True
-# has_criminal_record = False
-
-# if has_high_income or not has_criminal_record: # We remember how in java we used & | !, in python we use and and not and or
-#     print("Eligible for loan")
-
-# temperature = 30
-# if temperature > 30:
-#     print("It's a hot day")
-# else: 
-#     print("It's not a hot day")
+# Weight converter App
+# always indent in python with 4 spaces instead of 2..
+def weightConv():
+    weight = int(input("What is your Weight??"))
+    unit = input("What is your unit of measurement(lbs or kg)")
+    if unit.upper() == "L":
+      conversion = weight * 0.45
+      print(f"You are {conversion} kilos") # We use the formatted string to input dynamic values seamlessly to the string...
+    else:
+      conversion = weight / 0.45
+      print(f"You are {conversion} pounds")
 
 
-## Weight converter App
 
-# weight = int(input("What is your Weight??"))
-# unit = input("What is your unit of measurement(lbs or kg)")
-
-# if unit.upper() == "L":
-#     conversion = weight * 0.45
-#     print(f"You are {conversion} kilos") # We use the formatted string to input dynamic values seamlessly to the string...
-# else:
-#     conversion = weight / 0.45
-#     print(f"You are {conversion} pounds")
+# Loops
+def loops():
+    i = 1
+    while i <= 5:
+        print('*' * i)
+        i = i + 1
+    print("Done")
 
 
-# i = 1
-# while i <= 5:
-#     print('*' * i)
-#     i = i + 1
-# print("Done")
+# Generate a Random Number....
 
-# import random
+import random
 
-## there is no such thing as do while loops in python, you need to enhance your while loop in order replicate that type of functionality...
-# secret_number = int(random.random() * 10) + 1
-# guess = 0
-# while secret_number != guess:
-#   guess = int(input('Guess: '))
-#   if guess == secret_number:
-#     print('You won!')
-#     break
-#   elif guess > secret_number:
-#     print("Go lower!!")
-#   else: 
-#     print("Go higher!!")
+# There is no such thing as do while loops in python, you need to enhance your while loop in order replicate that type of functionality...
+secret_number = int(random.random() * 10) + 1
+guess = 0
+while secret_number != guess:
+  guess = int(input('Guess: '))
+  if guess == secret_number:
+    print('You won!')
+    break
+  elif guess > secret_number:
+    print("Go lower!!")
+  else: 
+    print("Go higher!!")
 
-# for item in [1,2,3,4,5,6,7,8]:
-#     print(item)
+for item in [1,2,3,4,5,6,7,8]:
+    print(item)
 
-# for item in range(10): ### in
-#   print(item)
+for item in range(10): 
+  print(item)
 
 
 
@@ -245,10 +227,3 @@ print(abs(-2.9))
 
 # class Cat(Mammal):
 #     pass
-
-
-# Modules, file with some python code, use it to organize code
-import converters
-converters.walk()
-
-# Ecommerce
